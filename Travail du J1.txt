@@ -1,0 +1,9 @@
+16/08/2021 J1 Reservia
+1/ lecture des consignes de pise en page
+2/ etude visuel du projet: comparaison de la page au format Normala et Mobile
+3/ Decoupage de la maquette en Div et parties principale
+4/ recherche des icon avec les mot anglais
+5/ recharche sur internet sur le format svg Flash
+6/ Codage du header
+
+
