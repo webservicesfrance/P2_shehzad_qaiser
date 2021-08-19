@@ -30,10 +30,17 @@
         <h3>Trouver votre hébergement pour des vacances de rêve</h3>
         <p>En plein centre ville ou en plein nature</p>
 
-        <div id="recherche">
-          <img src="images/logo/map.svg" alt="logo gps" height="25" />
-          <form action=""></form>
-          <h2>Recherche</h2>
+        <div id="recherches">
+          <img id="gps" src="images/logo/map.svg" alt="logo gps" height="25" />
+          <form method="post" action="traitement.php">
+            <input
+              type="text"
+              name="recherche"
+              id="recherche"
+              placeholder="Ville"
+            />
+            <input id="btn" type="submit" value="Recherche" />
+          </form>
         </div>
       </header>
     </div>
