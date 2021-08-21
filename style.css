@@ -23,7 +23,6 @@ li {
 #lienm,
 #liena,
 #liens {
-  background-color: rgb(220, 253, 205);
   font-size: large;
   text-decoration-line: none;
   margin: 0 10px; /* test espacement entre les menus*/
@@ -85,9 +84,9 @@ li {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 2px rgb(190, 190, 190) solid;
+  border: 1px rgb(190, 190, 190) solid;
   padding: 0;
-  width: 326px;
+  width: 350px;
   height: 30px;
   border-radius: 12px;
   background-color: ;
@@ -95,6 +94,7 @@ li {
 #gps {
   background-color: rgb(180, 180, 180);
   height: 13px;
+  width: 20px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 10px;
@@ -103,6 +103,7 @@ li {
   background-color: rgb(4, 129, 247);
   font-size: 1.5em;
   height: 30px;
+  width: 135px;
   color: white;
   border: none;
   border-top-right-radius: 10px;
