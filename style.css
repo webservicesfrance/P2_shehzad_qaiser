@@ -40,6 +40,26 @@ li {
   margin-right: 50%;
 }
 
+/*Menu filtre*/
+
+#menu-filtre {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  padding: 5px;
+  border: 1px red dotted;
+}
+
+#filtres,
+#economie,
+#familial,
+#romantique,
+#animaux {
+  padding: 0 10px;
+}
+
+/**/
+
 /*Media queries pour les tablettes*/
 @media all and (max-width: 1024px) {
   p {
