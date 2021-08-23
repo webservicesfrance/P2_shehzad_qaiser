@@ -51,7 +51,7 @@ li {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px rgb(225, 225, 225) solid;
+  border: 2px rgb(225, 225, 225) solid;
   padding: 0;
   width: 350px;
   height: 30px;
@@ -90,7 +90,7 @@ li {
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
-  border: 1px red dotted;
+  font-weight: 550;
 }
 
 #filtres,
@@ -99,10 +99,11 @@ li {
 #romantique,
 #animaux {
   margin: 20px;
-  padding: 1px;
+  padding-right: 5px;
   border-radius: 20px;
 }
 
+/*Les boutons des categories*/
 a {
   text-decoration-line: none;
 }
@@ -112,22 +113,26 @@ a {
 #romantique,
 #animaux {
   display: flex;
-  border: 2px solid rgb(0, 89, 255);
+  align-items: center;
+  border: 2px solid rgb(171, 171, 172);
   height: 30px;
   width: auto;
 }
 
 .rond {
-  background-color: salmon;
-  border-radius: 40%;
-  padding: 5px;
+  background-color: rgb(144, 182, 252);
+  border-radius: 50px/50px;
+  padding: 1px;
+  border: 2px solid rgb(114, 182, 252);
+  height: 25px;
+  width: 25px;
 }
 
-/*Media queries pour les tablettes*/
-@media all and (max-width: 1024px) {
+/*Media queries pour les Pc*/
+@media screen and (min-width: 1024px) {
   p {
-    color: rgb(255, 0, 0);
-    font-size: 0.9em;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
   }
   #puce {
     display: flex;
@@ -136,16 +141,41 @@ a {
   }
 }
 
-/*Media queries pour les Mobiles ip 980px android 800px , ecrire @media all and (max-device-width: 980px) , 480px represente le peripherique mobile*/
+/*Media queries pour les Tablettes*/
 
-@media all and (max-width: 580px) /* pour voir l'effet sur le pc on est obloger d'ecrire Max-width:580px */ {
+@media screen and (max-width: 768) {
   #entete {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap-reverse;
   }
   p {
-    color: blue;
+    color: rgb(0, 0, 0);
+    font-size: 0.9em;
+  }
+  #puce {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+  }
+  ul {
+    padding: 0;
+  }
+  #logo {
+    margin: 0;
+  }
+}
+
+/*Media queries pour les Mobiles ip 980px android 800px , ecrire @media all and (max-device-width: 980px) , 480px represente le peripherique mobile*/
+
+@media screen and (max-width: 767px) /* pour voir l'effet sur le pc on est obloger d'ecrire Max-width:580px */ {
+  #entete {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+  }
+  p {
+    color: rgb(0, 0, 0);
     font-size: 0.8em;
   }
   #puce {
