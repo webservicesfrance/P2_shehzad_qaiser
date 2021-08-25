@@ -4,45 +4,75 @@
 }
 
 body {
-  font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Raleway, sans-serif;
 }
 
 #bloc_page {
-  width: auto;
-  margin: 4px;
+  width: 100%;
+  margin: 0;
 }
 
-/* Menu avec display flex*/
-#entete,
-#puce {
+/*Version Desktop*/
+
+header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
-}
-
-li {
-  list-style: none; /*suprime les puces rond */
-}
-
-#lienm,
-#liena,
-#liens {
-  font-size: large;
-  text-decoration-line: none;
-  margin: 0 10px; /* test espacement entre les menus*/
-}
-
-#lienm:hover,
-#lienm:hover,
-#liena:hover,
-#liens:hover {
-  border-top: 2px solid rgb(143, 143, 143);
 }
 
 /*Traitement de l'espace du logo*/
 #logo {
-  margin-right: 50%;
+  justify-content: flex-start;
+  flex: 1;
+  padding-top: 50px;
+  padding-left: 100px;
+}
+nav {
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+nav ul li {
+  border-top: #ffffff 3px solid;
+  padding-top: 45px;
+  width: 165px;
+  text-align: center;
+  list-style: none; /*suprime les puces rond */
+}
+nav ul li:hover {
+  border-top: #0065fc 3px solid;
+}
+
+.item_menu {
+  color: #000000;
+  font-size: large;
+  text-decoration-line: none;
+  cursor: pointer; /*jolie petit curceur*/
+  /* test espacement entre les menus margin: 0 10px; pas necessaire */
+}
+
+.item_menu:hover {
+  color: #0065fc;
+}
+
+#inscrire {
+  justify-content: flex-end;
+  padding-top: 50px;
+  padding-right: 100px;
+}
+#inscrire a {
+  color: #0065fc;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 /*Bouton de Recherche*/
@@ -51,35 +81,42 @@ li {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 2px rgb(225, 225, 225) solid;
-  padding: 0;
-  width: 350px;
-  height: 30px;
+  border: 2px #f2f2f2 solid;
+  width: 370px;
+  height: 50px;
   border-radius: 12px;
-  font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Raleway, sans-serif;
 }
-#gps {
-  background-color: rgb(225, 225, 225);
-  height: 10px;
-  width: 20px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  padding: 10px;
+
+.icon_map {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px 0 0 10px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -2px;
+  font-size: 1.1em;
 }
+
 #btn {
-  background-color: rgb(58, 102, 248);
-  font-size: 1.2em;
-  height: 30px;
-  width: 135px;
-  color: white;
-  border: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  background-color: rgb(58, 102, 248);
+  font-size: 1.1em;
+  color: white;
+  border: none;
+  height: 50px;
 }
 
 #recherche {
-  padding: 0;
-  border-width: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1em;
+  border-width: 0;
 }
 
 /*Menu filtre*/
@@ -134,11 +171,6 @@ a {
     color: rgb(0, 0, 0);
     font-size: 1em;
   }
-  #puce {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
 }
 
 /*Media queries pour les Tablettes*/
@@ -153,40 +185,43 @@ a {
     color: rgb(0, 0, 0);
     font-size: 0.9em;
   }
-  #puce {
-    display: flex;
-    margin: 0;
-    flex-direction: column;
-  }
-  ul {
-    padding: 0;
-  }
-  #logo {
-    margin: 0;
-  }
+}
+ul {
+  padding: 0;
+}
+#logo {
+  margin: 0;
 }
 
 /*Media queries pour les Mobiles ip 980px android 800px , ecrire @media all and (max-device-width: 980px) , 480px represente le peripherique mobile*/
 
-@media screen and (max-width: 767px) /* pour voir l'effet sur le pc on est obloger d'ecrire Max-width:580px */ {
-  #entete {
+@media screen and (max-width: 767px) {
+  header {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  p {
-    color: rgb(0, 0, 0);
-    font-size: 0.8em;
+  .hp:nth-child(1) {
+    order: 1;
   }
-  #puce {
-    display: flex;
-    margin: 0;
-    flex-direction: column;
+  .hp:nth-child(2) {
+    order: 3;
   }
-  ul {
-    padding: 0;
+  .hp:nth-child(3) {
+    order: 2;
   }
+
+  nav ul li:hover {
+    border-bottom: #0065fc 3px solid;
+    border-top: none;
+  }
+
   #logo {
-    margin: 0;
+    padding-left: 20px;
+    padding-bottom: 0;
+    padding-top: 30px;
+  }
+  #inscrire {
+    padding-left: 0;
   }
 }

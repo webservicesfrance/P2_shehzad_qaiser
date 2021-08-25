@@ -4,79 +4,84 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reservia</title>
+    <script
+      src="https://kit.fontawesome.com/de4eadee7e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <title>Reservia</title>
   </head>
   <body>
     <div id="bloc_page">
       <header>
-        <div id="entete">
-          <div id="logo_reservia">
-            <img
-              id="logo"
-              src="images/logo/Reservia.svg"
-              alt="logo"
-              height="50"
-            />
-          </div>
-          <nav id="menu">
-            <ul id="puce">
-              <li><a id="lienm" href="#marseille">Hébergement</a></li>
-              <li><a id="liena" href="#activite">Activités</a></li>
-              <li><a id="liens" href="#">S'inscrire</a></li>
-            </ul>
-          </nav>
+        <div id="logo" class="hp">
+          <img src="images/logo/Reservia.svg" alt="logo" />
         </div>
-        <h3>Trouver votre hébergement pour des vacances de rêve</h3>
-        <p>En plein centre ville ou en plein nature</p>
-        <!--Bouton Recherche-->
-
-        <div id="recherches">
-          <img id="gps" src="images/logo/map.svg" alt="logo gps" height="25" />
-          <form method="post" action="traitement.php">
-            <input
-              type="text"
-              name="recherche"
-              id="recherche"
-              placeholder="Marseille, France"
-            />
-            <!--size="20" definie la taille en longueur de texte du input-->
-            <input id="btn" type="submit" value="Recherche" />
-          </form>
-        </div>
-
-        <br />
-
-        <div id="menu-filtre">
-          <div id="filtres"><a href="#"></a>Filtres</div>
-          <div id="economique">
-            <img class="rond" src="images/logo/argent.svg" alt="argent" />
-            <a href="#">Economique</a>
-          </div>
-          <div id="familial">
-            <img class="rond" src="images/logo/enfant.svg" alt="enfant" /><a
-              href="#"
-              >Familiale</a
-            >
-          </div>
-          <div id="romantique">
-            <img class="rond" src="images/logo/coeur.svg" alt="coeur" /><a
-              href="#"
-              >Romantique</a
-            >
-          </div>
-          <div id="animaux">
-            <img class="rond" src="images/logo/chien.svg" alt="animaux" /><a
-              href="#"
-              >Animaux domestiques</a
-            >
-          </div>
-        </div>
-        <p>
-          <img src="images/logo/info.svg" alt="info" height="25" />
-          Plus de 500 logements sont disponibles dans cette ville
-        </p>
+        <nav class="hp">
+          <ul>
+            <li><a class="item_menu" href="#marseille">Hébergement</a></li>
+            <li><a class="item_menu" href="#activite">Activités</a></li>
+          </ul>
+        </nav>
+        <div id="inscrire" class="hp"><a href="#">S'inscrire</a></div>
       </header>
+
+      <h3>Trouver votre hébergement pour des vacances de rêve</h3>
+      <p>En plein centre ville ou en plein nature</p>
+
+      <!--Bouton Recherche-->
+
+      <div id="recherches">
+        <div class="icon_map">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <form method="post" action="traitement.php">
+          <input
+            type="text"
+            name="recherche"
+            id="recherche"
+            placeholder="Marseille, France"
+          />
+        </form>
+        <!--size="20" definie la taille en longueur de texte du input-->
+        <input id="btn" type="submit" value="Recherche" />
+      </div>
+
+      <!-- Les filtres -->
+      <div id="menu-filtre">
+        <div id="filtres"><a href="#"></a>Filtres</div>
+        <div id="economique">
+          <img class="rond" src="images/logo/argent.svg" alt="argent" />
+          <a href="#">Economique</a>
+        </div>
+        <div id="familial">
+          <img class="rond" src="images/logo/enfant.svg" alt="enfant" /><a
+            href="#"
+            >Familiale</a
+          >
+        </div>
+        <div id="romantique">
+          <img class="rond" src="images/logo/coeur.svg" alt="coeur" /><a
+            href="#"
+            >Romantique</a
+          >
+        </div>
+        <div id="animaux">
+          <img class="rond" src="images/logo/chien.svg" alt="animaux" /><a
+            href="#"
+            >Animaux domestiques</a
+          >
+        </div>
+      </div>
+      <p>
+        <img src="images/logo/info.svg" alt="info" height="25" />
+        Plus de 500 logements sont disponibles dans cette ville
+      </p>
     </div>
   </body>
 </html>
