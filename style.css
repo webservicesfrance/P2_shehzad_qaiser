@@ -181,14 +181,14 @@ section {
   align-items: center;
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 20px;
-  margin: 0 20px;
+  padding: 0px;
+  margin: 10px;
 }
 article {
   display: flex;
   flex-direction: column;
   width: auto;
-  margin: 20px;
+  margin: 0px;
   background-color: #f2f2f2;
   border-radius: 12px;
   text-align: center;
@@ -224,8 +224,8 @@ aside {
   align-items: center;
   background-color: #f2f2f2;
   border-radius: 12px;
-  min-width: 350px;
-  height: 650px;
+  min-width: 400px;
+  height: 610px;
   margin: 20px;
   text-align: center;
 }
@@ -237,14 +237,20 @@ aside {
   background-color: #f2f2f2;
   color: rgb(0, 0, 0);
 }
+#aside-icon {
+  width: 40px;
+  height: 40px;
+  padding-left: 50px;
+}
 
 .hotel-aside {
-  display: flex;
   border: #ffffff 4px solid;
   border-radius: 12px;
   margin: 20px;
+  width: 350px;
 }
 .hotel-aside img {
+  float: left;
   height: 125px;
   width: 150px;
   border-radius: 10px 0 0 10px;
@@ -302,15 +308,15 @@ aside {
   color: #000000;
 }
 
-/*Media queries pour les Pc*/
+/*Media queries pour les Pc
 @media screen and (min-width: 1024px) {
   p {
     color: rgb(0, 0, 0);
     font-size: 1em;
   }
-}
+}*/
 
-/*Media queries pour les Tablettes*/
+/*Media queries pour les Tablettes
 
 @media screen and (max-width: 768) {
   #entete {
@@ -328,7 +334,7 @@ ul {
 }
 #logo {
   margin: 0;
-}
+}*/
 
 /*Media queries pour les Mobiles ip 980px android 800px , ecrire @media all and (max-device-width: 980px) , 480px represente le peripherique mobile*/
 
@@ -362,14 +368,24 @@ ul {
     padding-left: 0;
   }
   /*media queries de la Section 1*/
+  section,
   article {
     display: flex;
     flex-direction: column;
-    width: auto;
   }
 
   .ranger {
     display: flex;
     flex-direction: column;
+  }
+
+  /*media queries du bloc activite*/
+
+  .bloc-activite {
+    display: flex;
+    flex-direction: column;
+  }
+  aside {
+    width: auto;
   }
 }
