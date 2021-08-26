@@ -176,8 +176,16 @@ a {
 /*Section*/
 section {
   display: flex;
-  justify-content: row;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+}
+article {
+  border: black 1px solid;
+  width: 700px;
+  margin: 20px;
   background-color: #f2f2f2;
   border-radius: 12px;
 }
@@ -191,6 +199,8 @@ aside {
   align-items: center;
   background-color: #f2f2f2;
   border-radius: 12px;
+  width: 330px;
+  margin: 20px;
 }
 
 .aside_titre {
