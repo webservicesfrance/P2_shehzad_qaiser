@@ -151,18 +151,65 @@ a {
 #animaux {
   display: flex;
   align-items: center;
-  border: 2px solid rgb(171, 171, 172);
+  border: 2px solid #f2f2f2;
   height: 30px;
   width: auto;
 }
 
-.rond {
-  background-color: rgb(144, 182, 252);
-  border-radius: 50px/50px;
-  padding: 1px;
-  border: 2px solid rgb(114, 182, 252);
-  height: 25px;
-  width: 25px;
+#icon-child,
+#icon-dog,
+#coeur,
+#argent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  background-color: #f2f2f2;
+  color: blue;
+}
+
+#info {
+  color: blue;
+}
+/*Section*/
+section {
+  display: flex;
+  justify-content: row;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+}
+
+/*Aside*/
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+}
+
+.aside_titre {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+  background-color: #f2f2f2;
+  color: rgb(0, 0, 0);
+}
+
+.hotel-aside {
+  display: flex;
+  border: #ffffff 4px solid;
+  border-radius: 12px;
+}
+img {
+  height: 125px;
+  width: 150px;
+  border-radius: 10px 0 0 10px;
 }
 
 /*Media queries pour les Pc*/
