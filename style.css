@@ -177,19 +177,44 @@ a {
 section {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
   border-radius: 12px;
   padding: 20px;
+  margin: 0 20px;
 }
 article {
-  border: black 1px solid;
-  width: 700px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
   margin: 20px;
   background-color: #f2f2f2;
   border-radius: 12px;
+  text-align: center;
 }
 
+.hotel-section1 {
+  display: flex;
+  flex-direction: column;
+  border: #ffffff 4px solid;
+  border-radius: 12px;
+  margin: 20px;
+  width: 250px;
+}
+.hotel-section1 img {
+  height: 125px;
+  width: 250px;
+  border-radius: 10px 10px 0 0;
+}
+
+.ranger {
+  display: flex;
+}
+#titreHM {
+  text-align: left;
+  padding: 20px;
+}
 /*Aside*/
 
 aside {
@@ -199,8 +224,10 @@ aside {
   align-items: center;
   background-color: #f2f2f2;
   border-radius: 12px;
-  width: 330px;
+  min-width: 350px;
+  height: 650px;
   margin: 20px;
+  text-align: center;
 }
 
 .aside_titre {
@@ -215,8 +242,9 @@ aside {
   display: flex;
   border: #ffffff 4px solid;
   border-radius: 12px;
+  margin: 20px;
 }
-img {
+.hotel-aside img {
   height: 125px;
   width: 150px;
   border-radius: 10px 0 0 10px;
@@ -280,5 +308,16 @@ ul {
   }
   #inscrire {
     padding-left: 0;
+  }
+  /*media queries de la Section 1*/
+  article {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .ranger {
+    display: flex;
+    flex-direction: column;
   }
 }
