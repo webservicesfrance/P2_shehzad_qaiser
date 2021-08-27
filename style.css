@@ -104,7 +104,7 @@ nav ul li:hover {
 #btn {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: rgb(58, 102, 248);
+  background-color: #0065fc;
   font-size: 1.1em;
   color: white;
   border: none;
@@ -167,22 +167,21 @@ a {
   height: 30px;
   border-radius: 12px;
   background-color: #f2f2f2;
-  color: blue;
+  color: #0065fc;
 }
 
 #info {
-  color: blue;
+  color: #0065fc;
 }
 /*Section*/
 section {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   background-color: #ffffff;
   border-radius: 12px;
   padding: 0px;
-  margin: 10px;
+  margin: 20px;
 }
 article {
   display: flex;
@@ -226,7 +225,7 @@ aside {
   border-radius: 12px;
   min-width: 400px;
   height: 610px;
-  margin: 20px;
+  margin-left: 20px;
   text-align: center;
 }
 
@@ -247,7 +246,7 @@ aside {
   border: #ffffff 4px solid;
   border-radius: 12px;
   margin: 20px;
-  width: 350px;
+  width: 350px; /*Largeur des bandes presentant les hotels*/
 }
 .hotel-aside img {
   float: left;
@@ -260,17 +259,19 @@ aside {
 
 #titreAM {
   text-align: left;
-  padding: 10px;
+  margin-left: 20px;
+  padding-left: 10px;
 }
 
 .bloc-activite {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 20px;
 }
 
 .hotel-section2 {
-  width: 280px;
+  width: 300px;
   height: 420px;
   margin: 10px;
   border-radius: 12px;
@@ -282,19 +283,19 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 280px;
+  width: 300px;
   height: 420px;
   margin: 0 20px;
   text-align: center;
 }
 
 .hotel-section2 img {
-  width: 270px;
+  width: 300px;
   height: 350px;
   border-radius: 10px 10px 0 0;
 }
 .hotel-section3 img {
-  width: 270px;
+  width: 300px;
   height: 130px;
   border-radius: 10px 10px 0 0;
 }
@@ -306,6 +307,22 @@ aside {
 
 .superpose a {
   color: #000000;
+}
+
+/*Footer*/
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 200px;
+  background-color: #f2f2f2;
+}
+.liens {
+  width: 30%;
+}
+.liens a:hover {
+  color: red;
 }
 
 /*Media queries pour les Pc
@@ -387,5 +404,36 @@ ul {
   }
   aside {
     width: auto;
+  }
+  /*Largeur de bandes de la section 2*/
+
+  .hotel-section2 {
+    width: 350px;
+    height: 420px;
+    margin: 10px;
+    border-radius: 12px;
+    border: #f2f2f2 2px solid;
+    text-align: center;
+  }
+
+  .hotel-section3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: 420px;
+    margin: 0 20px;
+    text-align: center;
+  }
+
+  .hotel-section2 img {
+    width: 350px;
+    height: 350px;
+    border-radius: 10px 10px 0 0;
+  }
+  .hotel-section3 img {
+    width: 350px;
+    height: 130px;
+    border-radius: 10px 10px 0 0;
   }
 }
