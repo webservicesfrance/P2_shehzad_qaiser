@@ -19,6 +19,10 @@ header {
   justify-content: space-between;
 }
 
+h2 {
+  font-weight: 400;
+}
+
 /*Traitement de l'espace du logo*/
 #logo {
   justify-content: flex-start;
@@ -75,8 +79,17 @@ nav ul li:hover {
   font-weight: 600;
 }
 
+/*Section0*/
+.section0 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  padding-right: 40px;
+  align-items: flex-start;
+}
+
 /*Bouton de Recherche*/
-#recherches {
+#bloc-recherches {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -119,25 +132,23 @@ nav ul li:hover {
   border-width: 0;
 }
 
-/*Menu filtre*/
+/*Menu filtre avec les 4 gros boutons de Fitres*/
+#bloc_filtre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  gap: 20px;
+}
 
 #menu-filtre {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: stretch;
   align-items: center;
+  gap: 20px;
   flex-wrap: wrap;
   font-weight: 550;
-}
-
-#filtres,
-#economique,
-#familial,
-#romantique,
-#animaux {
-  margin: 20px;
-  padding-right: 5px;
-  border-radius: 20px;
 }
 
 /*Les boutons des categories*/
@@ -145,34 +156,41 @@ a {
   text-decoration-line: none;
 }
 
-#economique,
-#familial,
-#romantique,
-#animaux {
+.button {
   display: flex;
+  flex-direction: row;
   align-items: center;
   border: 2px solid #f2f2f2;
-  height: 30px;
-  width: auto;
+  border-radius: 35px;
+  width: fit-content;
+  gap: 10px;
 }
 
-#icon-child,
-#icon-dog,
-#coeur,
-#argent {
+.icon {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 12px;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 35px;
   background-color: #f2f2f2;
   color: #0065fc;
+}
+
+.text {
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: 700;
+  padding-right: 10px;
 }
 
 #info {
   color: #0065fc;
 }
+
 /*Section*/
 section {
   display: flex;
@@ -386,6 +404,23 @@ ul {
   #inscrire {
     padding-left: 0;
   }
+
+  /*Bloc recherches*/
+
+  #bloc-recherches {
+    margin: 0 auto;
+  }
+
+  #filtres {
+    display: flex;
+    flex: 1;
+    padding-right: 60%;
+  }
+
+  #bloc_filtre {
+    flex-wrap: wrap;
+  }
+
   /*media queries de la Section 1 Hebergement à Marseille*/
   section,
   article {
