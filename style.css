@@ -183,7 +183,7 @@ a {
    width: 50px;
    height: 50px;
    border-radius: 35px;
-   background-color: #f2f2f2;
+   background-color: #c9defa;
    color: #0065fc;
 }
 
@@ -218,7 +218,7 @@ article {
    width: 100%;
    background-color: #f2f2f2;
    border-radius: 12px;
-   text-align: center;
+   text-align: left;
    width: 70%;
    padding: 0 20px;
    /*padding: 0 20px;espacement des vignettes à l'interieur de article*/
@@ -228,11 +228,18 @@ article {
    display: flex;
    flex-direction: column;
    flex-basis: 0;
-   flex-grow: 1;
-   border: #ffffff 4px solid;
+   flex-grow: 2;
+   border: #ffffff 5px solid;
    border-radius: 12px;
    margin: 20px; /* margin: 20px; espacement entre les vignettes*/
+   box-shadow: -1px 14px 12px -5px #d6d6d6;
 }
+
+.hotel-section1 h3,
+.hotel-section1 span {
+   padding-left: 10px;
+}
+
 .hotel-section1 img {
    width: 100%;
    border-radius: 10px 10px 0 0;
@@ -240,8 +247,7 @@ article {
 
 .ranger {
    display: flex;
-   flex-basis: 0;
-   flex-grow: 1;
+   flex-direction: row;
 }
 #titreHM {
    text-align: left;
@@ -296,11 +302,11 @@ aside {
 .hotel-aside {
    display: flex;
    flex-direction: row;
-   border: #ffffff 4px solid;
+   border: #ffffff 5px solid;
    border-radius: 12px;
-   margin-bottom: 30px;
+   margin-top: 30px;
    /*Largeur des bandes presentant les hotels*/
-   flex: 1;
+   box-shadow: -1px 14px 12px -5px #d6d6d6;
 }
 
 .aside-image {
@@ -316,7 +322,7 @@ aside {
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   padding: 0 20px;
+   padding-left: 20px;
    width: 55%;
 }
 
