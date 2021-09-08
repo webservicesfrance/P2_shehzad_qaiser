@@ -205,11 +205,11 @@ section {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   align-items: center;
+   align-items: stretch; /*pour avoir la meme hauteur des 2 blocs*/
    background-color: #ffffff;
    border-radius: 12px;
-   gap: 20px;
-   margin-left: 40px;
+   gap: 40px;
+   margin-left: 40px; /*espacement du bloc à gauche*/
    margin-right: 40px;
 }
 article {
@@ -220,15 +220,18 @@ article {
    border-radius: 12px;
    text-align: center;
    width: 70%;
-   padding: 0 30px;
+   padding: 0 20px;
+   /*padding: 0 20px;espacement des vignettes à l'interieur de article*/
 }
 
 .hotel-section1 {
    display: flex;
    flex-direction: column;
+   flex-basis: 0;
+   flex-grow: 1;
    border: #ffffff 4px solid;
    border-radius: 12px;
-   margin: 30px; /*espacement entre les vignettes*/
+   margin: 20px; /* margin: 20px; espacement entre les vignettes*/
 }
 .hotel-section1 img {
    width: 100%;
@@ -237,6 +240,8 @@ article {
 
 .ranger {
    display: flex;
+   flex-basis: 0;
+   flex-grow: 1;
 }
 #titreHM {
    text-align: left;
@@ -266,8 +271,6 @@ article {
 aside {
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   align-items: center;
    background-color: #f2f2f2;
    border-radius: 12px;
    width: 30%;
@@ -276,7 +279,7 @@ aside {
 
 .aside_titre {
    display: flex;
-   width: 70%;
+   width: 100%;
    justify-content: space-between;
    border-radius: 12px;
    background-color: #f2f2f2;
@@ -287,6 +290,7 @@ aside {
    width: 40px;
    height: 40px;
    padding-left: 50px;
+   color: rgb(0, 0, 0);
 }
 
 .hotel-aside {
@@ -294,9 +298,9 @@ aside {
    flex-direction: row;
    border: #ffffff 4px solid;
    border-radius: 12px;
-   width: 100%;
    margin-bottom: 30px;
    /*Largeur des bandes presentant les hotels*/
+   flex: 1;
 }
 
 .aside-image {
@@ -388,7 +392,7 @@ footer {
    color: red;
 }
 
-/*Media queries pour les Pc*/
+/*Media queries Desktop*/
 @media screen and (min-width: 768px) {
    #bloc_page {
       width: 100%;
@@ -466,35 +470,48 @@ ul {
    }
 
    /*media queries de la Section 1 Hebergement à Marseille*/
-   section,
+   section {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+      border-radius: 0;
+      margin: 0;
+      padding: 0;
+   }
+
    article {
       display: flex;
       flex-direction: column;
+      justify-content: auto;
       width: 100%;
-      border-radius: 0;
-      padding: 20px 0;
-      margin: 20px 0;
-      height: auto;
-   } /*new*/
+      padding: 0px;
+      background-color: rgb(250, 250, 250);
+      flex-grow: 0;
+   }
    .ranger {
       display: flex;
       flex-direction: column;
+      flex-grow: 0;
+      padding: 10px;
+      margin: 0;
+   }
+
+   .aside-image {
    }
    .hotel-section1 {
-      margin: 10px auto;
-      width: 85%;
+      margin: 30px;
    }
-   .hotel-section1 img {
-      height: 125px;
-   }
+
    /*media queries Aside , centrage*/
 
    aside {
       width: 100%;
+      padding: 10px;
+      margin: 0;
+      flex-grow: 0;
    }
    .hotel-aside {
-      margin: 10px auto;
-      width: 85%;
+      margin: 30px;
    }
    /*media queries section 2 bloc activite*/
 
