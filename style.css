@@ -228,7 +228,7 @@ article {
    display: flex;
    flex-direction: column;
    flex-basis: 0;
-   flex-grow: 2;
+   flex-grow: 1;
    border: #ffffff 5px solid;
    border-radius: 12px;
    margin: 20px; /* margin: 20px; espacement entre les vignettes*/
@@ -269,64 +269,126 @@ article {
 }
 
 #etoilegris {
-   color: rgb(151, 150, 150);
+   color: rgb(150, 150, 150);
 }
 
-/*Aside*/
-
-aside {
-   display: flex;
-   flex-direction: column;
-   background-color: #f2f2f2;
-   border-radius: 12px;
-   width: 30%;
-   padding: 30px; /*espacement des vigniette dans le Aside*/
+/*Aside les hotels populaires*/
+.populaire-bloc {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 0.25fr 1fr 1fr 1fr;
+   row-gap: 25px;
+   height: 90%;
+   width: 90%;
 }
 
-.aside_titre {
+.populaire-bloc .aside-titre {
    display: flex;
-   width: 100%;
    justify-content: space-between;
-   border-radius: 12px;
-   background-color: #f2f2f2;
-   color: rgb(0, 0, 0);
+   align-items: flex-start;
+   margin: 0;
 }
 
-#aside-icon {
-   width: 40px;
-   height: 40px;
-   padding-left: 50px;
-   color: rgb(0, 0, 0);
+.populaire-bloc .aside-titre h2 {
+   margin: 0;
 }
 
-.hotel-aside {
+.populaire-bloc i {
+   font-size: 25px;
+}
+
+.vignietteA {
+   background-color: rgb(140, 140, 140);
+}
+
+.vignietteA:hover {
+   cursor: pointer;
+   transform: scale(1.05);
+   transition: ease 0.5s;
+} /*effet au survole*/
+
+.aside-image-envelop {
+   margin: 0;
+   padding: 0;
    display: flex;
-   flex-direction: row;
-   border: #ffffff 5px solid;
-   border-radius: 12px;
-   margin-top: 30px;
-   /*Largeur des bandes presentant les hotels*/
-   box-shadow: -1px 14px 12px -5px #d6d6d6;
-}
-
-.aside-image {
-   width: 45%;
-}
-.hotel-aside img {
+   align-items: center;
+   width: 40%;
    height: 100%;
+   border-radius: 15px 0 0 15px;
+}
+.aside-image-envelop img {
    width: 100%;
-   border-radius: 10px 0 0 10px;
-} /*height: 125px; taille de l'image */
+   height: 100%;
+   max-height: 110px;
+   min-width: 170px;
+   border-radius: 15px 0 0 15px;
+   object-fit: cover;
+} /*permet de couvrir la totalité de l'espace en conservant les proportions*/
 
-.aside-legende {
+.vignietteA .hotel-legende {
+   margin-left: 10px;
    display: flex;
    flex-direction: column;
-   align-items: flex-start;
-   padding-left: 20px;
-   width: 55%;
+   justify-content: space-between;
 }
 
-/*Section 2 eme partie*/
+.vignietteA .hotel-legende .hotel-titre {
+   padding: 4px 0;
+   margin: 0;
+}
+
+.vignietteA .hotel-legende .hotel-prix {
+   margin-top: 0;
+   margin-bottom: 0;
+}
+/*vignette 1*/
+.vignietteA#salonA1 {
+   display: flex;
+   margin: 0;
+   background-color: white;
+   border-radius: 20px;
+   padding: 7px 0 7px 7px;
+   box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
+}
+/*vignette 2*/
+.vignietteA#salonA2 {
+   display: flex;
+   margin: 0;
+   background-color: white;
+   border-radius: 20px;
+   padding: 5px 0 5px 6px;
+   box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
+}
+/*vignette 3*/
+.vignietteA#salonA3 {
+   display: flex;
+   margin: 0;
+   background-color: white;
+   border-radius: 20px;
+   padding: 5px 0 5px 6px;
+   box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
+}
+/*tarif des chambres*/
+.prix {
+   font-weight: bold;
+}
+/*etoiles */
+.etoiles {
+   color: #0065fc;
+}
+
+.hostingMainCardGradeIconEmpty {
+   color: #b1b1b1;
+}
+
+/*lien general sur Afficher plus*/
+.Afficherplus a {
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+}
+
+/*Section 2 eme partie Les activites*/
 
 #titreAM {
    text-align: left;
