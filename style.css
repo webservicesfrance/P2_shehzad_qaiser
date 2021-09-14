@@ -291,6 +291,7 @@ article {
    color: rgb(160, 71, 71);
    height: 10px;
    font-size: 1rem;
+   padding-bottom: 10px;
 }
 .fas {
    width: 10px;
