@@ -1,516 +1,663 @@
 <!DOCTYPE html>
 <html lang="fr">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <!--Icons de chez Fontawesome-->
-      <script
-         src="https://kit.fontawesome.com/de4eadee7e.js"
-         crossorigin="anonymous"
-      ></script>
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
 
-      <!--Google Police de Font-->
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
-         rel="stylesheet"
-      />
-      <!--Feuille de style-->
-      <link rel="stylesheet" href="style.css" />
-      <title>Reservia</title>
-   </head>
-   <body>
-      <div id="bloc_page">
-         <!--Bloc de Navigation-->
-         <header>
-            <div id="logo" class="hp">
-               <img src="images/logo/Reservia.svg" alt="Reservia" />
-            </div>
-            <!--Bloc 1 Navigation Navbar-->
-            <nav class="hp">
-               <ul>
-                  <li><a class="item_menu" href="#titreHM">Hébergement</a></li>
-                  <li><a class="item_menu" href="#titreAM">Activités</a></li>
-               </ul>
-            </nav>
-            <div id="inscrire" class="hp"><a href="#">S'inscrire</a></div>
-         </header>
+          <!--Icons de chez Fontawesome-->
+          <script
+               src="https://kit.fontawesome.com/de4eadee7e.js"
+               crossorigin="anonymous"
+          ></script>
 
-         <!--Bloc Recherche-->
-         <div class="section0">
-            <h1>Trouver votre hébergement pour des vacances de rêve</h1>
-            <h2>En plein centre ville ou en plein nature</h2>
-            <div id="bloc-recherches">
-               <div class="icon_map">
-                  <i class="fas fa-map-marker-alt"></i>
+          <!--Google Police de Font-->
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+               href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+               rel="stylesheet"
+          />
+          <!--Feuille de style-->
+          <link rel="stylesheet" href="style.css" />
+          <link rel="icon" type="image/svg" href="images/logo/Reservia.svg" />
+
+          <title>Reservia</title>
+     </head>
+     <body>
+          <div id="bloc_page">
+               <!--Bloc de Navigation-->
+               <header>
+                    <div id="logo" class="hp">
+                         <img src="images/logo/Reservia.svg" alt="Reservia" />
+                    </div>
+                    <!--Bloc 1 Navigation Navbar-->
+                    <nav class="hp">
+                         <ul>
+                              <li>
+                                   <a class="item_menu" href="#titreHM"
+                                        >Hébergement</a
+                                   >
+                              </li>
+                              <li>
+                                   <a class="item_menu" href="#titreAM"
+                                        >Activités</a
+                                   >
+                              </li>
+                         </ul>
+                    </nav>
+                    <div id="inscrire" class="hp">
+                         <a href="#">S'inscrire</a>
+                    </div>
+               </header>
+
+               <!--Bloc Recherche-->
+               <div class="section0">
+                    <h1>Trouver votre hébergement pour des vacances de rêve</h1>
+                    <h2>En plein centre ville ou en plein nature</h2>
+                    <div id="bloc-recherches">
+                         <div class="icon_map">
+                              <i class="fas fa-map-marker-alt"></i>
+                         </div>
+                         <form method="post" action="traitement.php">
+                              <input
+                                   type="text"
+                                   name="recherche"
+                                   id="recherche"
+                                   placeholder="Marseille, France"
+                              />
+                         </form>
+
+                         <input id="btn" type="submit" value="Recherche" />
+                    </div>
+
+                    <br />
+                    <!-- Les filtres -->
+                    <div id="bloc_filtre">
+                         <div id="filtres">Filtres</div>
+
+                         <div id="menu-filtre"></div>
+                         <a href="#">
+                              <div class="button">
+                                   <div class="icon">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                   </div>
+                                   <div class="text">Economique</div>
+                              </div>
+                         </a>
+
+                         <a href="#">
+                              <div class="button">
+                                   <div class="icon">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                   </div>
+                                   <div class="text">Familiale</div>
+                              </div>
+                         </a>
+
+                         <a href="#">
+                              <div class="button">
+                                   <div class="icon">
+                                        <i class="fas fa-child"></i>
+                                   </div>
+                                   <div class="text">Romantique</div>
+                              </div>
+                         </a>
+
+                         <a href="#">
+                              <div class="button">
+                                   <div class="icon">
+                                        <i class="fas fa-dog"></i>
+                                   </div>
+                                   <div class="text">Animaux domestique</div>
+                              </div>
+                         </a>
+                    </div>
+                    <!--Fermeture de la div bloc_filtres-->
+
+                    <p>
+                         <i class="fas fa-info-circle" id="info"></i>
+                         Plus de 500 logements sont disponibles dans cette ville
+                    </p>
                </div>
-               <form method="post" action="traitement.php">
-                  <input
-                     type="text"
-                     name="recherche"
-                     id="recherche"
-                     placeholder="Marseille, France"
-                  />
-               </form>
+               <main>
+                    <!--Section 1 Hebergement-->
+                    <section>
+                         <article>
+                              <h2 id="article-titre">
+                                   Hébergement à Marseille
+                              </h2>
 
-               <input id="btn" type="submit" value="Recherche" />
-            </div>
+                              <div class="bloc-vigniette">
+                                   <!--Vigniette hotel 1-->
+                                   <a href="#">
+                                        <div class="vignietteM">
+                                             <div
+                                                  class="box-imgM"
+                                                  id="chambre1"
+                                             >
+                                                  <img
+                                                       class="imgM"
+                                                       src="/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                                                       alt="hotel"
+                                                  />
+                                             </div>
+                                             <div class="hotel-info">
+                                                  <h3 class="hotel-titre">
+                                                       Auberge la Cannebiere
+                                                  </h3>
+                                                  <p>
+                                                       Nuit à partir de
+                                                       <span class="prix"
+                                                            >25 €</span
+                                                       >
+                                                  </p>
+                                                  <div class="etoile">
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i
+                                                       ><i
+                                                            class="fas fa-star"
+                                                       ></i
+                                                       ><i
+                                                            class="
+                                                                 fas
+                                                                 fa-star
+                                                                 hostingMainCardGradeIconEmpty
+                                                            "
+                                                       ></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </a>
 
-            <br />
-            <!-- Les filtres -->
-            <div id="bloc_filtre">
-               <div id="filtres">Filtres</div>
+                                   <!--Vigniette hotel 2-->
+                                   <a href="#">
+                                        <div class="vignietteM">
+                                             <div
+                                                  class="box-imgM"
+                                                  id="chambre2"
+                                             >
+                                                  <img
+                                                       class="imgM"
+                                                       src="/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
+                                                       alt="hotel"
+                                                  />
+                                             </div>
+                                             <div class="hotel-info">
+                                                  <h3 class="hotel-titre">
+                                                       Hotel du port
+                                                  </h3>
+                                                  <p>
+                                                       Nuit à partir de
+                                                       <span class="prix"
+                                                            >52 €</span
+                                                       >
+                                                  </p>
+                                                  <div class="etoile">
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i
+                                                       ><i
+                                                            class="fas fa-star"
+                                                       ></i
+                                                       ><i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </a>
 
-               <div id="menu-filtre"></div>
-               <a href="#">
-                  <div class="button">
-                     <div class="icon">
-                        <i class="fas fa-money-bill-wave"></i>
-                     </div>
-                     <div class="text">Economique</div>
-                  </div>
-               </a>
+                                   <!--Vigniette hotel 3-->
+                                   <a href="#">
+                                        <div class="vignietteM">
+                                             <div
+                                                  class="box-imgM"
+                                                  id="chambre3"
+                                             >
+                                                  <img
+                                                       class="imgM"
+                                                       src="/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
+                                                       alt="hotel"
+                                                  />
+                                             </div>
+                                             <div class="hotel-info">
+                                                  <h3 class="hotel-titre">
+                                                       Hotel Les mouettes
+                                                  </h3>
+                                                  <p>
+                                                       Nuit à partir de
+                                                       <span class="prix"
+                                                            >76 €</span
+                                                       >
+                                                  </p>
+                                                  <div class="etoile">
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i
+                                                       ><i
+                                                            class="fas fa-star"
+                                                       ></i
+                                                       ><i
+                                                            class="
+                                                                 fas
+                                                                 fa-star
+                                                                 hostingMainCardGradeIconEmpty
+                                                            "
+                                                       ></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </a>
 
-               <a href="#">
-                  <div class="button">
-                     <div class="icon">
-                        <i class="fas fa-money-bill-wave"></i>
-                     </div>
-                     <div class="text">Familiale</div>
-                  </div>
-               </a>
+                                   <!--Vigniette hotel 4-->
 
-               <a href="#">
-                  <div class="button">
-                     <div class="icon">
-                        <i class="fas fa-child"></i>
-                     </div>
-                     <div class="text">Romantique</div>
-                  </div>
-               </a>
+                                   <a href="#">
+                                        <div class="vignietteM">
+                                             <div
+                                                  class="box-imgM"
+                                                  id="chambre4"
+                                             >
+                                                  <img
+                                                       class="imgM"
+                                                       src="/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                                                       alt="hotel"
+                                                  />
+                                             </div>
+                                             <div class="hotel-info">
+                                                  <h3 class="hotel-titre">
+                                                       Hotel de la mer
+                                                  </h3>
+                                                  <p>
+                                                       Nuit à partir de
+                                                       <span class="prix"
+                                                            >46 €</span
+                                                       >
+                                                  </p>
+                                                  <div class="etoile">
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i
+                                                       ><i
+                                                            class="fas fa-star"
+                                                       ></i
+                                                       ><i
+                                                            class="
+                                                                 fas
+                                                                 fa-star
+                                                                 hostingMainCardGradeIconEmpty
+                                                            "
+                                                       ></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </a>
+                                   <!--Vigniette hotel 5-->
+                                   <a href="#">
+                                        <div class="vignietteM">
+                                             <div
+                                                  class="box-imgM"
+                                                  id="chambre5"
+                                             >
+                                                  <img
+                                                       class="imgM"
+                                                       src="/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
+                                                       alt="hotel"
+                                                  />
+                                             </div>
+                                             <div class="hotel-info">
+                                                  <h3 class="hotel-titre">
+                                                       Auberge Le Panier
+                                                  </h3>
+                                                  <p>
+                                                       Nuit à partir de
+                                                       <span class="prix"
+                                                            >23 €</span
+                                                       >
+                                                  </p>
+                                                  <div class="etoile">
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i
+                                                       ><i
+                                                            class="fas fa-star"
+                                                       ></i
+                                                       ><i
+                                                            class="
+                                                                 fas
+                                                                 fa-star
+                                                                 hostingMainCardGradeIconEmpty
+                                                            "
+                                                       ></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </a>
 
-               <a href="#">
-                  <div class="button">
-                     <div class="icon">
-                        <i class="fas fa-dog"></i>
-                     </div>
-                     <div class="text">Animaux domestique</div>
-                  </div>
-               </a>
-            </div>
-            <!--Fermeture de la div bloc_filtres-->
+                                   <!--Vigniette hotel 6 -->
 
-            <p>
-               <i class="fas fa-info-circle" id="info"></i>
-               Plus de 500 logements sont disponibles dans cette ville
-            </p>
-         </div>
-         <main>
-            <!--Section 1 Hebergement-->
-            <section>
-               <article>
-                  <h2 id="article-titre">Hébergement à Marseille</h2>
-
-                  <div class="bloc-vigniette">
-                     <!--Vigniette hotel 1-->
-                     <a href="#">
-                        <div class="vignietteM">
-                           <div class="box-imgM" id="chambre1">
-                              <img
-                                 class="imgM"
-                                 src="/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-                                 alt="hotel"
-                              />
-                           </div>
-                           <div class="hotel-info">
-                              <h3 class="hotel-titre">Auberge la Cannebiere</h3>
-                              <p>
-                                 Nuit à partir de
-                                 <span class="prix">25 €</span>
-                              </p>
-                              <div class="etoile">
-                                 <i class="fas fa-star"></i>
-                                 <i class="fas fa-star"></i>
-                                 <i class="fas fa-star"></i
-                                 ><i class="fas fa-star"></i
-                                 ><i
-                                    class="
-                                       fas
-                                       fa-star
-                                       hostingMainCardGradeIconEmpty
-                                    "
-                                 ></i>
+                                   <a href="#">
+                                        <div class="vignietteM">
+                                             <div
+                                                  class="box-imgM"
+                                                  id="chambre6"
+                                             >
+                                                  <img
+                                                       class="imgM"
+                                                       src="/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+                                                       alt="hotel"
+                                                  />
+                                             </div>
+                                             <div class="hotel-info">
+                                                  <h3 class="hotel-titre">
+                                                       Hotel du port
+                                                  </h3>
+                                                  <p>
+                                                       Nuit à partir de
+                                                       <span class="prix"
+                                                            >52 €</span
+                                                       >
+                                                  </p>
+                                                  <div class="etoile">
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i>
+                                                       <i
+                                                            class="fas fa-star"
+                                                       ></i
+                                                       ><i
+                                                            class="fas fa-star"
+                                                       ></i
+                                                       ><i
+                                                            class="
+                                                                 fas
+                                                                 fa-star
+                                                                 hostingMainCardGradeIconEmpty
+                                                            "
+                                                       ></i>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </a>
                               </div>
-                           </div>
-                        </div>
-                     </a>
+                              <!--fin Bloc Vigniette-->
+                              <a href="#">
+                                   <h3 class="afficheplus">Afficher plus</h3>
+                              </a>
+                         </article>
 
-                     <!--Vigniette hotel 2-->
-                     <a href="#">
-                        <div class="vignietteM">
-                           <div class="box-imgM" id="chambre2">
-                              <img
-                                 class="imgM"
-                                 src="/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
-                                 alt="hotel"
-                              />
-                           </div>
-                           <div class="hotel-info">
-                              <h3 class="hotel-titre">Hotel du port</h3>
-                              <p>
-                                 Nuit à partir de
-                                 <span class="prix">52 €</span>
-                              </p>
-                              <div class="etoile">
-                                 <i class="fas fa-star"></i>
-                                 <i class="fas fa-star"></i>
-                                 <i class="fas fa-star"></i
-                                 ><i class="fas fa-star"></i
-                                 ><i class="fas fa-star"></i>
+                         <!--Bloc Lateral Aside -->
+                         <aside>
+                              <div class="populaire-bloc">
+                                   <div class="aside-titre">
+                                        <h2>Les plus populaires</h2>
+                                        <i class="fas fa-chart-line"></i>
+                                   </div>
+                                   <a href="#">
+                                        <div class="vignietteA" id="salonA1">
+                                             <div
+                                                  class="aside-image-envelop"
+                                                  id="most-popular-img1"
+                                             >
+                                                  <img
+                                                       src="images/hebergements/4_small/emile-guillemot-aside1.jpg"
+                                                       alt="Hôtel le Soleil du Matin"
+                                                  />
+                                             </div>
+                                             <div class="hotel-legende">
+                                                  <div class="hotel-info">
+                                                       <h3 class="hotel-titre">
+                                                            Hôtel le Soleil du
+                                                            Matin
+                                                       </h3>
+                                                       <p class="hotel-prix">
+                                                            Nuit à partir de
+                                                            <span class="prix"
+                                                                 >128€</span
+                                                            >
+                                                       </p>
+                                                  </div>
+                                                  <div class="etoile">
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </a>
+                                   <a href="#">
+                                        <div class="vignietteA" id="salonA2">
+                                             <div
+                                                  class="aside-image-envelop"
+                                                  id="most-popular-img2"
+                                             >
+                                                  <img
+                                                       src="images/hebergements/4_small/aw-creative-aside2.jpg"
+                                                       alt="Au coeur de l'eau Chambres d'hôtes"
+                                                  />
+                                             </div>
+                                             <div class="hotel-legende">
+                                                  <div class="hotel-info">
+                                                       <h3 class="hotel-titre">
+                                                            Au coeur de l'eau
+                                                            Chambres d'hôtes
+                                                       </h3>
+                                                       <p class="hotel-prix">
+                                                            Nuit à partir de
+                                                            <span class="prix"
+                                                                 >71€</span
+                                                            >
+                                                       </p>
+                                                  </div>
+                                                  <div class="etoile">
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                       <div
+                                                            class="
+                                                                 fas
+                                                                 fa-star
+                                                                 hostingMainCardGradeIconEmpty
+                                                            "
+                                                       ></div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </a>
+                                   <a href="#">
+                                        <div class="vignietteA" id="salonA3">
+                                             <div
+                                                  class="aside-image-envelop"
+                                                  id="most-popular-img3"
+                                             >
+                                                  <img
+                                                       src="images/hebergements/4_small/febrian-zakaria-aside3.jpg"
+                                                       alt="Hôtel Tout bleu et blanc"
+                                                  />
+                                             </div>
+                                             <div class="hotel-legende">
+                                                  <div class="hotel-info">
+                                                       <h3 class="hotel-titre">
+                                                            Hôtel Tout bleu et
+                                                            blanc
+                                                       </h3>
+                                                       <p class="hotel-prix">
+                                                            Nuit à partir de
+                                                            <span class="prix"
+                                                                 >68€</span
+                                                            >
+                                                       </p>
+                                                  </div>
+                                                  <div class="etoile">
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                       <div
+                                                            class="fas fa-star"
+                                                       ></div>
+                                                       <div
+                                                            class="
+                                                                 fas
+                                                                 fa-star
+                                                                 hostingMainCardGradeIconEmpty
+                                                            "
+                                                       ></div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </a>
                               </div>
-                           </div>
-                        </div>
-                     </a>
+                         </aside>
+                    </section>
 
-                     <!--Vigniette hotel 3-->
-                     <a href="#">
-                        <div class="vignietteM">
-                           <div class="box-imgM" id="chambre3">
-                              <img
-                                 class="imgM"
-                                 src="/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
-                                 alt="hotel"
-                              />
-                           </div>
-                           <div class="hotel-info">
-                              <h3 class="hotel-titre">Hotel Les mouettes</h3>
-                              <p>
-                                 Nuit à partir de
-                                 <span class="prix">76 €</span>
-                              </p>
-                              <div class="etoile">
-                                 <i class="fas fa-star"></i>
-                                 <i class="fas fa-star"></i>
-                                 <i class="fas fa-star"></i
-                                 ><i class="fas fa-star"></i
-                                 ><i
-                                    class="
-                                       fas
-                                       fa-star
-                                       hostingMainCardGradeIconEmpty
-                                    "
-                                 ></i>
-                              </div>
-                           </div>
-                        </div>
-                     </a>
+                    <!-- Section 2 Activité à marseille-->
 
-                     <!--Vigniette hotel 4-->
+                    <div id="titreAM"><h2>Activité à Marseille</h2></div>
+                    <div class="bloc-activite">
+                         <div class="hotel-section2">
+                              <a href="#"
+                                   ><img
+                                        src="/images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                                        alt="hotel"
+                                   />
+                                   <h3>Vieux port</h3></a
+                              >
+                         </div>
+                         <div class="hotel-section3">
+                              <div class="superpose">
+                                   <a href="#"
+                                        ><img
+                                             src="/images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
+                                             alt="hotel"
+                                        />
+                                        <h3>Fort de Pormégues</h3></a
+                                   >
+                              </div>
+                              <div class="superpose">
+                                   <a href="#"
+                                        ><img
+                                             src="/images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
+                                             alt="hotel"
+                                        />
+                                        <h3>Iles du Frioul</h3></a
+                                   >
+                              </div>
+                         </div>
+                         <div class="hotel-section2">
+                              <a href="#"
+                                   ><img
+                                        src="/images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+                                        alt="hotel"
+                                   />
+                                   <h3>Parc National des calanques</h3></a
+                              >
+                         </div>
+                         <div class="hotel-section3">
+                              <div class="superpose">
+                                   <a href="#"
+                                        ><img
+                                             src="/images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                                             alt="hotel"
+                                        />
+                                        <h3>Notre-Dame-de-la-Garde</h3></a
+                                   >
+                              </div>
+                              <div class="superpose">
+                                   <a href="#"
+                                        ><img
+                                             src="/images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
+                                             alt="hotel"
+                                        />
+                                        <h3>Parc Longchamps</h3></a
+                                   >
+                              </div>
+                         </div>
+                    </div>
+               </main>
+               <!--Bloc Bas de page-->
+               <footer>
+                    <div class="liens">
+                         <h3>A propos</h3>
+                         <a href="#">Fonctionnement du site</a> <br />
+                         <a href="#">Condition génerale de vente</a><br />
+                         <a href="#">Données et confidentialités</a><br />
+                    </div>
 
-                     <a href="#">
-                        <div class="vignietteM">
-                           <div class="box-imgM" id="chambre4">
-                              <img
-                                 class="imgM"
-                                 src="/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
-                                 alt="hotel"
-                              />
-                           </div>
-                           <div class="hotel-info">
-                              <h3 class="hotel-titre">Hotel de la mer</h3>
-                              <p>
-                                 Nuit à partir de
-                                 <span class="prix">46 €</span>
-                              </p>
-                              <div class="etoile">
-                                 <i class="fas fa-star"></i>
-                                 <i class="fas fa-star"></i>
-                                 <i class="fas fa-star"></i
-                                 ><i class="fas fa-star"></i
-                                 ><i
-                                    class="
-                                       fas
-                                       fa-star
-                                       hostingMainCardGradeIconEmpty
-                                    "
-                                 ></i>
-                              </div>
-                           </div>
-                        </div>
-                     </a>
-                     <!--Vigniette hotel 5-->
-                     <a href="#">
-                        <div class="vignietteM">
-                           <div class="box-imgM" id="chambre5">
-                              <img
-                                 class="imgM"
-                                 src="/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
-                                 alt="hotel"
-                              />
-                           </div>
-                           <div class="hotel-info">
-                              <h3 class="hotel-titre">Auberge Le Panier</h3>
-                              <p>
-                                 Nuit à partir de
-                                 <span class="prix">23 €</span>
-                              </p>
-                              <div class="etoile">
-                                 <i class="fas fa-star"></i>
-                                 <i class="fas fa-star"></i>
-                                 <i class="fas fa-star"></i
-                                 ><i class="fas fa-star"></i
-                                 ><i
-                                    class="
-                                       fas
-                                       fa-star
-                                       hostingMainCardGradeIconEmpty
-                                    "
-                                 ></i>
-                              </div>
-                           </div>
-                        </div>
-                     </a>
+                    <div class="liens">
+                         <h3>Nos hébergements</h3>
+                         <a href="#">Charte de qualité</a><br />
+                         <a href="#">Soumettre votre hotel</a><br />
+                    </div>
 
-                     <!--Vigniette hotel 6 -->
-
-                     <a href="#">
-                        <div class="vignietteM">
-                           <div class="box-imgM" id="chambre6">
-                              <img
-                                 class="imgM"
-                                 src="/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
-                                 alt="hotel"
-                              />
-                           </div>
-                           <div class="hotel-info">
-                              <h3 class="hotel-titre">Hotel du port</h3>
-                              <p>
-                                 Nuit à partir de
-                                 <span class="prix">52 €</span>
-                              </p>
-                              <div class="etoile">
-                                 <i class="fas fa-star"></i>
-                                 <i class="fas fa-star"></i>
-                                 <i class="fas fa-star"></i
-                                 ><i class="fas fa-star"></i
-                                 ><i
-                                    class="
-                                       fas
-                                       fa-star
-                                       hostingMainCardGradeIconEmpty
-                                    "
-                                 ></i>
-                              </div>
-                           </div>
-                        </div>
-                     </a>
-                  </div>
-                  <!--fin Bloc Vigniette-->
-                  <a href="#"> <h3 class="afficheplus">Afficher plus</h3> </a>
-               </article>
-
-               <!--Bloc Lateral Aside -->
-               <aside>
-                  <div class="populaire-bloc">
-                     <div class="aside-titre">
-                        <h2>Les plus populaires</h2>
-                        <i class="fas fa-chart-line"></i>
-                     </div>
-                     <a href="#">
-                        <div class="vignietteA" id="salonA1">
-                           <div
-                              class="aside-image-envelop"
-                              id="most-popular-img1"
-                           >
-                              <img
-                                 src="images/hebergements/4_small/emile-guillemot-aside1.jpg"
-                                 alt="Hôtel le Soleil du Matin"
-                              />
-                           </div>
-                           <div class="hotel-legende">
-                              <div class="hotel-info">
-                                 <h3 class="hotel-titre">
-                                    Hôtel le Soleil du Matin
-                                 </h3>
-                                 <p class="hotel-prix">
-                                    Nuit à partir de
-                                    <span class="prix">128€</span>
-                                 </p>
-                              </div>
-                              <div class="etoile">
-                                 <div class="fas fa-star"></div>
-                                 <div class="fas fa-star"></div>
-                                 <div class="fas fa-star"></div>
-                                 <div class="fas fa-star"></div>
-                                 <div class="fas fa-star"></div>
-                              </div>
-                           </div>
-                        </div>
-                     </a>
-                     <a href="#">
-                        <div class="vignietteA" id="salonA2">
-                           <div
-                              class="aside-image-envelop"
-                              id="most-popular-img2"
-                           >
-                              <img
-                                 src="images/hebergements/4_small/aw-creative-aside2.jpg"
-                                 alt="Au coeur de l'eau Chambres d'hôtes"
-                              />
-                           </div>
-                           <div class="hotel-legende">
-                              <div class="hotel-info">
-                                 <h3 class="hotel-titre">
-                                    Au coeur de l'eau Chambres d'hôtes
-                                 </h3>
-                                 <p class="hotel-prix">
-                                    Nuit à partir de
-                                    <span class="prix">71€</span>
-                                 </p>
-                              </div>
-                              <div class="etoile">
-                                 <div class="fas fa-star"></div>
-                                 <div class="fas fa-star"></div>
-                                 <div class="fas fa-star"></div>
-                                 <div class="fas fa-star"></div>
-                                 <div
-                                    class="
-                                       fas
-                                       fa-star
-                                       hostingMainCardGradeIconEmpty
-                                    "
-                                 ></div>
-                              </div>
-                           </div>
-                        </div>
-                     </a>
-                     <a href="#">
-                        <div class="vignietteA" id="salonA3">
-                           <div
-                              class="aside-image-envelop"
-                              id="most-popular-img3"
-                           >
-                              <img
-                                 src="images/hebergements/4_small/febrian-zakaria-aside3.jpg"
-                                 alt="Hôtel Tout bleu et blanc"
-                              />
-                           </div>
-                           <div class="hotel-legende">
-                              <div class="hotel-info">
-                                 <h3 class="hotel-titre">
-                                    Hôtel Tout bleu et blanc
-                                 </h3>
-                                 <p class="hotel-prix">
-                                    Nuit à partir de
-                                    <span class="prix">68€</span>
-                                 </p>
-                              </div>
-                              <div class="etoile">
-                                 <div class="fas fa-star"></div>
-                                 <div class="fas fa-star"></div>
-                                 <div class="fas fa-star"></div>
-                                 <div class="fas fa-star"></div>
-                                 <div
-                                    class="
-                                       fas
-                                       fa-star
-                                       hostingMainCardGradeIconEmpty
-                                    "
-                                 ></div>
-                              </div>
-                           </div>
-                        </div>
-                     </a>
-                  </div>
-               </aside>
-            </section>
-
-            <!-- Section 2 Activité à marseille-->
-
-            <div id="titreAM"><h2>Activité à Marseille</h2></div>
-            <div class="bloc-activite">
-               <div class="hotel-section2">
-                  <a href="#"
-                     ><img
-                        src="/images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                        alt="hotel"
-                     />
-                     <h3>Vieux port</h3></a
-                  >
-               </div>
-               <div class="hotel-section3">
-                  <div class="superpose">
-                     <a href="#"
-                        ><img
-                           src="/images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
-                           alt="hotel"
-                        />
-                        <h3>Fort de Pormégues</h3></a
-                     >
-                  </div>
-                  <div class="superpose">
-                     <a href="#"
-                        ><img
-                           src="/images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
-                           alt="hotel"
-                        />
-                        <h3>Iles du Frioul</h3></a
-                     >
-                  </div>
-               </div>
-               <div class="hotel-section2">
-                  <a href="#"
-                     ><img
-                        src="/images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
-                        alt="hotel"
-                     />
-                     <h3>Parc National des calanques</h3></a
-                  >
-               </div>
-               <div class="hotel-section3">
-                  <div class="superpose">
-                     <a href="#"
-                        ><img
-                           src="/images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                           alt="hotel"
-                        />
-                        <h3>Notre-Dame-de-la-Garde</h3></a
-                     >
-                  </div>
-                  <div class="superpose">
-                     <a href="#"
-                        ><img
-                           src="/images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
-                           alt="hotel"
-                        />
-                        <h3>Parc Longchamps</h3></a
-                     >
-                  </div>
-               </div>
-            </div>
-         </main>
-         <!--Bloc Bas de page-->
-         <footer>
-            <div class="liens">
-               <h3>A propos</h3>
-               <a href="#">Fonctionnement du site</a> <br />
-               <a href="#">Condition génerale de vente</a><br />
-               <a href="#">Données et confidentialités</a><br />
-            </div>
-
-            <div class="liens">
-               <h3>Nos hébergements</h3>
-               <a href="#">Charte de qualité</a><br />
-               <a href="#">Soumettre votre hotel</a><br />
-            </div>
-
-            <div class="liens">
-               <h3>Assistance</h3>
-               <a href="#">Centre d'aide</a><br />
-               <a href="#">Nous contacter</a><br />
-            </div>
-         </footer>
-      </div>
-   </body>
+                    <div class="liens">
+                         <h3>Assistance</h3>
+                         <a href="#">Centre d'aide</a><br />
+                         <a href="#">Nous contacter</a><br />
+                    </div>
+               </footer>
+          </div>
+     </body>
 </html>

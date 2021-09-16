@@ -1,629 +1,637 @@
-@font-face {
-   font-family: "Raleway";
-   src: url("static/Raleway-Regular.ttf") format("truetype");
-}
-
 body {
-   font-family: Raleway, sans-serif;
-   color: rgb(0, 0, 0);
+     font-family: "Raleway", sans-serif;
+     color: rgb(0, 0, 0);
 }
 
 #bloc_page {
-   width: 100%;
-   margin: 0;
+     width: 100%;
+     margin: 0;
 }
 
 main {
-   width: 98%;
-   margin: auto;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
 }
 /*Version Desktop*/
 
 header {
-   display: flex;
-   justify-content: space-between;
+     display: flex;
+     justify-content: space-between;
 }
 
 h2 {
-   font-weight: bold;
+     font-weight: bold;
 }
 
 a {
-   color: black;
+     color: black;
 }
 
 a:hover {
-   color: blue;
+     color: blue;
 } /*Un peu de dynamise au lien*/
 
 /*Traitement de l'espace du logo*/
 #logo {
-   justify-content: flex-start;
-   flex: 1;
-   padding-top: 50px;
-   padding-left: 100px;
+     justify-content: flex-start;
+     flex: 1;
+     padding-top: 50px;
+     padding-left: 100px;
 }
 nav {
-   justify-content: center;
+     justify-content: center;
 }
 
 nav ul {
-   display: flex;
-   list-style-type: none;
-   margin-block-start: 0px;
-   margin-block-end: 0px;
-   margin-inline-start: 0px;
-   margin-inline-end: 0px;
-   padding-inline-start: 0px;
+     display: flex;
+     list-style-type: none;
+     margin-block-start: 0px;
+     margin-block-end: 0px;
+     margin-inline-start: 0px;
+     margin-inline-end: 0px;
+     padding-inline-start: 0px;
 }
 
 nav ul li {
-   border-top: #ffffff 3px solid;
-   padding-top: 45px;
-   width: 165px;
-   text-align: center;
-   list-style: none; /*suprime les puces rond */
+     border-top: #ffffff 3px solid;
+     padding-top: 45px;
+     width: 165px;
+     text-align: center;
+     list-style: none; /*suprime les puces rond */
 }
 nav ul li:hover {
-   border-top: #0065fc 3px solid;
+     border-top: #0065fc 3px solid;
 }
 
 .item_menu {
-   color: #000000;
-   font-size: large;
-   text-decoration-line: none;
-   cursor: pointer; /*jolie petit curceur*/
-   /* test espacement entre les menus margin: 0 10px; pas necessaire */
+     color: #000000;
+     font-size: large;
+     text-decoration-line: none;
+     cursor: pointer; /*jolie petit curceur*/
+     /* test espacement entre les menus margin: 0 10px; pas necessaire */
 }
 
 .item_menu:hover {
-   color: #0065fc;
+     color: #0065fc;
 }
 
 #inscrire {
-   justify-content: flex-end;
-   padding-top: 50px;
-   padding-right: 100px;
+     justify-content: flex-end;
+     padding-top: 50px;
+     padding-right: 100px;
 }
 #inscrire a {
-   color: #0065fc;
-   cursor: pointer;
-   text-decoration: none;
-   font-weight: 600;
+     color: #0065fc;
+     cursor: pointer;
+     text-decoration: none;
+     font-weight: 600;
 }
 
 /*Section0*/
 .section0 {
-   display: flex;
-   flex-direction: column;
-   padding-left: 40px;
-   padding-right: 40px;
-   align-items: flex-start;
+     display: flex;
+     flex-direction: column;
+     padding-left: 40px;
+     padding-right: 40px;
+     align-items: flex-start;
 }
 
 /*Bouton de Recherche*/
 #bloc-recherches {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   border: 2px #f2f2f2 solid;
-   width: 370px;
-   height: 50px;
-   border-radius: 12px;
-   font-family: Raleway, sans-serif;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     border: 2px #f2f2f2 solid;
+     width: 370px;
+     height: 50px;
+     border-radius: 12px;
+     font-family: Raleway, sans-serif;
 }
 
 .icon_map {
-   width: 50px;
-   height: 50px;
-   border-radius: 10px 0 0 10px;
-   background-color: #f2f2f2;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
-   left: -2px;
-   font-size: 1.1em;
+     width: 50px;
+     height: 50px;
+     border-radius: 10px 0 0 10px;
+     background-color: #f2f2f2;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     left: -2px;
+     font-size: 1.1em;
 }
 
 #btn {
-   border-top-right-radius: 10px;
-   border-bottom-right-radius: 10px;
-   background-color: #0065fc;
-   font-size: 1.1em;
-   color: white;
-   border: none;
-   height: 50px;
+     border-top-right-radius: 10px;
+     border-bottom-right-radius: 10px;
+     background-color: #0065fc;
+     font-size: 1.1em;
+     color: white;
+     border: none;
+     height: 50px;
 }
 
 #recherche {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-size: 1.1em;
-   border-width: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 1.1em;
+     border-width: 0;
 }
 
 /*Menu filtre avec les 4 gros boutons de Fitres*/
 #bloc_filtre {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: stretch;
-   gap: 20px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: stretch;
+     gap: 20px;
 }
 
 #menu-filtre {
-   display: flex;
-   flex-direction: row;
-   justify-content: stretch;
-   align-items: center;
-   gap: 20px;
-   flex-wrap: wrap;
-   font-weight: 550;
+     display: flex;
+     flex-direction: row;
+     justify-content: stretch;
+     align-items: center;
+     gap: 20px;
+     flex-wrap: wrap;
+     font-weight: 550;
 }
 
 /*Les boutons des categories*/
 a {
-   text-decoration-line: none;
+     text-decoration-line: none;
 }
 
 .button {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   border: 2px solid #f2f2f2;
-   border-radius: 35px;
-   width: fit-content;
-   gap: 10px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     border: 2px solid #f2f2f2;
+     border-radius: 35px;
+     width: fit-content;
+     gap: 10px;
 }
 
 .icon {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
 
-   width: 50px;
-   height: 50px;
-   border-radius: 35px;
-   background-color: #c9defa;
-   color: #0065fc;
+     width: 50px;
+     height: 50px;
+     border-radius: 35px;
+     background-color: #c9defa;
+     color: #0065fc;
 }
 
 .text {
-   justify-content: flex-end;
-   display: flex;
-   align-items: center;
-   color: black;
-   font-weight: 700;
-   padding-right: 10px;
+     justify-content: flex-end;
+     display: flex;
+     align-items: center;
+     color: black;
+     font-weight: 700;
+     padding-right: 10px;
 }
 
 #info {
-   color: #0065fc;
+     color: #0065fc;
 }
 
 /*Section 1 Centrale*/
 section {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   align-items: stretch; /*pour avoir la meme hauteur des 2 blocs*/
-   background-color: #ffffff;
-   border-radius: 20px;
-   gap: 40px;
-   margin: 10px 40px;
+     display: flex;
+     flex-direction: row;
+     align-items: stretch; /*pour avoir la meme hauteur des 2 blocs*/
+     background-color: #ffffff;
+     gap: 30px;
+     margin: 30px;
+     padding-right: 40px;
 }
 
 article {
-   background-color: #f2f2f2;
-   border-radius: 20px;
-   text-align: left;
-   padding: 0 20px;
-   /*padding: 0 20px;espacement des vignettes à l'interieur de article*/
+     background-color: #f2f2f2;
+     border-radius: 20px;
+     text-align: left;
+     padding: 20px;
+     width: 75%;
 }
 
 .bloc-vigniette {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-gap: 25px;
-   padding: 0 0 0 0;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 25px;
+     padding: 0 0 0 0;
 }
 
 .vignietteM {
-   background: white;
-   list-style: none;
-   display: flex;
-   flex-direction: column;
-   justify-content: left;
-   align-items: start;
-   border-radius: 20px;
-   border: 5px solid rgb(255, 255, 255);
-   box-shadow: 0px 0px 6px 0px black;
+     background: white;
+     list-style: none;
+     height: 200px;
+     display: flex;
+     flex-direction: column;
+     justify-content: left;
+     align-items: start;
+     border-radius: 20px;
+     border: 5px solid rgb(255, 255, 255);
+     box-shadow: 0px 0px 6px 0px white;
 }
 
 .vignietteM:hover {
-   cursor: pointer;
-   transform: scale(1.05);
-   transition: ease 0.5s;
+     cursor: pointer;
+     transform: scale(1.05);
+     transition: ease 0.5s;
 }
 
 .box-imgM {
-   margin: 0;
-   padding: 0;
-   display: flex;
-   align-items: flex-start;
-   width: 100%;
-   height: 40%;
-   border-radius: 20px 20px 0 0;
+     display: flex;
+     width: 100%;
+     height: 50%;
+     border-radius: 20px 20px 0 0;
 }
 .box-imgM img {
-   width: 100%;
-   height: 100%;
-   max-height: 110px;
-   min-width: 170px;
-   border-radius: 20px 20px 0 0;
-   object-fit: cover;
+     width: 100%;
+     height: 100%;
+     max-height: 110px;
+     min-width: 170px;
+     border-radius: 20px 20px 0 0;
+     object-fit: cover;
 } /*permet de couvrir la totalité de l'espace en conservant les proportions*/
 
 .vignietteM .hotel-info {
-   margin: 5px;
+     padding: 5px;
+     display: flex;
+     width: 100%;
+     height: 50%;
+     flex-direction: column;
+     gap: 10px;
 }
-
-.vignietteM .hotel-info .hotel-titre {
-   margin: 0;
+.vignietteM .hotel-info h3 {
+     display: flex;
+     font-size: 1.17em;
+     margin-block-start: 0px;
+     margin-block-end: 0px;
+     margin-inline-start: 0px;
+     margin-inline-end: 0px;
+     font-weight: bold;
 }
-
-.vignietteM .hotel-info {
-   background: rgb(250, 250, 250);
+.vignietteM .hotel-info p {
+     display: flex;
+     font-size: 1em;
+     margin-block-start: 0px;
+     margin-block-end: 0px;
+     margin-inline-start: 0px;
+     margin-inline-end: 0px;
+     font-weight: normal;
 }
-
-.vignietteM .hotel-info .hotel-prix {
-   margin: 3px 0 3px 0;
-}
-
 /*Div Etoiles*/
 .etoile {
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-start;
-   color: rgb(160, 71, 71);
-   height: 10px;
-   font-size: 1rem;
-   padding-bottom: 10px;
-}
-.fas {
-   width: 10px;
-   height: 10px;
-   color: #0065fc;
-   padding: 5px;
-}
-
-.hostingMainCardGradeIconEmpty {
-   color: #7a7a7a;
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+     padding: 10px;
+     color: #0065fc;
 }
 
 /*Aside les hotels populaires*/
+aside {
+     width: 25%;
+}
 .populaire-bloc {
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: 0.25fr 1fr 1fr 1fr;
-   row-gap: 25px;
-   height: 100%;
-   width: 100%;
-   background-color: #f2f2f2;
-   border-radius: 20px;
-   padding-left: 20px;
-   padding-right: 20px; /*espacement gauche droite*/
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 0.25fr 1fr 1fr 1fr;
+     row-gap: 25px;
+     height: 100%;
+     width: 100%;
+     background-color: #f2f2f2;
+     border-radius: 20px;
+     padding-left: 20px;
+     padding-right: 20px; /*espacement gauche droite*/
 }
 
 .populaire-bloc .aside-titre {
-   display: flex;
-   justify-content: space-between;
-   align-items: flex-start;
-   margin: 0;
-   background-color: #f2f2f2;
-   border-radius: 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     margin: 0;
+     background-color: #f2f2f2;
+     border-radius: 20px;
 }
 
 .populaire-bloc .aside-titre h2 {
-   margin: 0;
+     margin: 0;
 }
 .aside-titre {
-   padding: 20px;
+     padding: 20px;
 }
 
 .populaire-bloc i {
-   font-size: 25px;
+     font-size: 25px;
 }
 
 .vignietteA {
-   background-color: rgb(140, 140, 140);
+     background-color: rgb(140, 140, 140);
 }
 
 .vignietteA:hover {
-   cursor: pointer;
-   transform: scale(1.05);
-   transition: ease 0.5s;
+     cursor: pointer;
+     transform: scale(1.05);
+     transition: ease 0.5s;
 } /*effet au survole*/
 
 .aside-image-envelop {
-   margin: 0;
-   padding: 0;
-   display: flex;
-   align-items: center;
-   width: 40%;
-   height: 100%;
-   border-radius: 15px 0 0 15px;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     align-items: center;
+     width: 40%;
+     height: 100%;
+     border-radius: 15px 0 0 15px;
 }
 .aside-image-envelop img {
-   width: 100%;
-   height: 100%;
-   max-height: 110px;
-   min-width: 170px;
-   border-radius: 15px 0 0 15px;
-   object-fit: cover;
+     width: 100%;
+     height: 100%;
+     max-height: 110px;
+     min-width: 170px;
+     border-radius: 15px 0 0 15px;
+     object-fit: cover;
 } /*permet de couvrir la totalité de l'espace en conservant les proportions*/
 
 .vignietteA .hotel-legende {
-   margin-left: 10px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+     margin-left: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
 }
 
 .vignietteA .hotel-legende .hotel-titre {
-   padding: 4px 0;
-   margin: 0;
+     padding: 4px 0;
+     margin: 0;
 }
 
 .vignietteA .hotel-legende .hotel-prix {
-   margin-top: 0;
-   margin-bottom: 0;
+     margin-top: 0;
+     margin-bottom: 0;
 }
 /*vignette 1*/
 .vignietteA#salonA1 {
-   display: flex;
-   margin: 0;
-   background-color: white;
-   border-radius: 20px;
-   padding: 7px 0 7px 7px;
-   box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
+     display: flex;
+     margin: 0;
+     background-color: white;
+     border-radius: 20px;
+     padding: 7px 0 7px 7px;
+     box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
 }
 /*vignette 2*/
 .vignietteA#salonA2 {
-   display: flex;
-   margin: 0;
-   background-color: white;
-   border-radius: 20px;
-   padding: 5px 0 5px 6px;
-   box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
+     display: flex;
+     margin: 0;
+     background-color: white;
+     border-radius: 20px;
+     padding: 5px 0 5px 6px;
+     box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
 }
 /*vignette 3*/
 .vignietteA#salonA3 {
-   display: flex;
-   margin: 0;
-   background-color: white;
-   border-radius: 20px;
-   padding: 5px 0 5px 6px;
-   box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
+     display: flex;
+     margin: 0;
+     background-color: white;
+     border-radius: 20px;
+     padding: 5px 0 5px 6px;
+     box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
 }
 /*tarif des chambres*/
 .prix {
-   font-weight: bold;
+     font-weight: bold;
+}
+/*etoiles */
+.etoiles {
+     color: #0065fc;
+}
+
+.hostingMainCardGradeIconEmpty {
+     color: #b1b1b1;
 }
 
 /*lien general sur Afficher plus*/
 .Afficherplus a {
-   text-decoration: none;
-   color: black;
-   font-weight: bold;
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
 }
 
 /*Section 2 eme partie Les activites*/
 
 #titreAM {
-   text-align: left;
-   padding-left: 50px;
+     text-align: left;
+     padding-left: 50px;
 }
 
 .bloc-activite {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-   margin: 30px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     margin: 30px;
 }
 
 .hotel-section2 {
-   width: 300px;
-   height: 420px;
-   margin: 0;
-   border-radius: 12px;
-   border: #f2f2f2 2px solid;
-   text-align: center;
-   box-shadow: -1px 14px 12px -5px #f2f2f2;
+     width: 300px;
+     height: 420px;
+     margin: 0;
+     border-radius: 12px;
+     border: #f2f2f2 2px solid;
+     text-align: center;
+     box-shadow: -1px 14px 12px -5px #f2f2f2;
 }
 
 .hotel-section3 {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   width: 300px;
-   height: 420px;
-   margin: 0;
-   text-align: center;
-   box-shadow: -1px 14px 12px -5px #f2f2f2;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     width: 300px;
+     height: 420px;
+     margin: 0;
+     text-align: center;
+     box-shadow: -1px 14px 12px -5px #f2f2f2;
 }
 
 .hotel-section2 img {
-   width: 300px;
-   height: 350px;
-   border-radius: 10px 10px 0 0;
+     width: 300px;
+     height: 350px;
+     border-radius: 10px 10px 0 0;
 }
 .hotel-section3 img {
-   width: 300px;
-   height: 130px;
-   border-radius: 10px 10px 0 0;
+     width: 300px;
+     height: 130px;
+     border-radius: 10px 10px 0 0;
 }
 
 .superpose {
-   border: 2px #f2f2f2 solid;
-   border-radius: 12px;
+     border: 2px #f2f2f2 solid;
+     border-radius: 12px;
 }
 
 .superpose a {
-   color: #000000;
+     color: #000000;
 }
 
 /*Footer*/
 footer {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   width: 100%;
-   height: 200px;
-   background-color: #f2f2f2;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     width: 100%;
+     height: 200px;
+     background-color: #f2f2f2;
 }
 .liens {
-   width: auto;
+     width: auto;
 }
 .liens a:hover {
-   color: #0065fc;
+     color: red;
 }
 
 /*Media queries Tablette*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-   section {
-      display: flex;
-      flex-direction: column-reverse;
-   }
-   .populaire-bloc {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      padding: 20px;
-   }
-
-   .vignietteA {
-      margin: 20px;
-      max-width: 350px;
-   }
-   .vignietteA .hotel-legende {
-      margin-left: 40px; /*evite que le texte se supperpose sur l'image*/
-   }
-   .aside-titre .vignietteA {
-      flex: 1; /*chaque vigniette a la meme proportion*/
-   }
+     section {
+          display: flex;
+          flex-direction: column-reverse;
+     }
+     .populaire-bloc {
+          display: flex;
+          flex-direction: row;
+     }
 }
 
 /*Media queries pour les Mobiles ip 980px android 800px , ecrire @media all and (max-device-width: 980px) , 480px represente le peripherique mobile*/
 
 @media screen and (max-width: 767px) {
-   header {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-   }
-   .hp:nth-child(1) {
-      order: 1;
-   }
-   .hp:nth-child(2) {
-      order: 3;
-   }
-   .hp:nth-child(3) {
-      order: 2;
-   }
+     body {
+          margin: 0;
+     }
+     header {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+     }
+     .hp:nth-child(1) {
+          order: 1;
+     }
+     .hp:nth-child(2) {
+          order: 3;
+     }
+     .hp:nth-child(3) {
+          order: 2;
+     }
 
-   nav ul li:hover {
-      border-bottom: #0065fc 3px solid;
-      border-top: none;
-   }
+     nav ul li:hover {
+          border-bottom: #0065fc 3px solid;
+          border-top: none;
+     }
 
-   #logo {
-      padding-left: 20px;
-      padding-bottom: 0;
-      padding-top: 30px;
-   }
-   #inscrire {
-      padding-left: 0;
-   }
+     #logo {
+          padding-left: 20px;
+          padding-bottom: 0;
+          padding-top: 30px;
+     }
+     #inscrire {
+          padding-left: 0;
+     }
 
-   /*Bloc recherches*/
+     /*Bloc recherches*/
 
-   #bloc-recherches {
-      margin: 0 auto;
-   }
+     #bloc-recherches {
+          margin: 0 auto;
+     }
 
-   #filtres {
-      display: flex;
-      flex: 1;
-      padding-right: 60%;
-   }
+     #filtres {
+          display: flex;
+          flex: 1;
+          padding-right: 60%;
+     }
 
-   #bloc_filtre {
-      flex-wrap: wrap;
-   }
+     #bloc_filtre {
+          flex-wrap: wrap;
+     }
 
-   /*media queries de la Section 1 Hebergement à Marseille*/
-   section {
-      display: flex;
-      flex-direction: column-reverse;
-      width: 100%;
-      border-radius: 0;
-      margin: 0;
-      padding: 0;
-   }
+     /*media queries de la Section 1 Hebergement à Marseille*/
+     section {
+          display: flex;
+          flex-direction: column-reverse;
+          border-radius: 0;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          gap: unset;
+     }
 
-   article {
-      display: flex;
-      flex-direction: column;
-      justify-content: auto;
-      padding: 10px;
-      background-color: rgb(250, 250, 250);
-      flex-grow: 0;
-   }
-   .bloc-vigniette {
-      display: flex;
-      flex-direction: column;
-   }
+     article {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: #ffffff;
+          padding: 20px;
+          margin: auto;
+     }
+     .bloc-vigniette {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+     }
 
-   /*media queries section 2 bloc activite*/
+     .vignietteM {
+          box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
+     }
 
-   .bloc-activite {
-      display: flex;
-      flex-direction: column;
-   }
+     aside {
+          display: flex;
+          width: 100%;
+     }
 
-   /*Largeur de bandes section 2 bloc activite*/
+     .populaire-bloc {
+          border-radius: 0%;
+          padding: 30px;
+     }
 
-   .hotel-section2 {
-      width: 400px;
-      height: 200px;
-      margin: 10px;
-      border-radius: 12px;
-      border: #f2f2f2 2px solid;
-      text-align: center;
-   }
-   .hotel-section2 img {
-      width: 400px;
-      height: 150px;
-   }
+     /*media queries section 2 bloc activite*/
 
-   .hotel-section3 {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 400px;
-      height: 420px;
-      margin: 0 20px;
-      text-align: center;
-      border-radius: 10px 10px 0 0;
-   }
+     .bloc-activite {
+          display: flex;
+          flex-direction: column;
+     }
 
-   .hotel-section3 img {
-      width: 400px;
-      height: 130px;
-   }
+     /*Largeur de bandes section 2 bloc activite*/
+
+     .hotel-section2 {
+          width: 400px;
+          height: 200px;
+          margin: 10px;
+          border-radius: 12px;
+          border: #f2f2f2 2px solid;
+          text-align: center;
+     }
+     .hotel-section2 img {
+          width: 400px;
+          height: 150px;
+     }
+
+     .hotel-section3 {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 400px;
+          height: 420px;
+          margin: 0 20px;
+          text-align: center;
+          border-radius: 10px 10px 0 0;
+     }
+
+     .hotel-section3 img {
+          width: 400px;
+          height: 130px;
+     }
 }
