@@ -340,7 +340,7 @@ aside {
 }
 .vignietteA {
     background-color: white;
-    border-radius: 15px;
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -428,7 +428,7 @@ aside {
 .hotel-section2 {
     height: 100%;
     border-radius: 20px;
-    border: #f2f2f2 2px solid;
+    border: #f2f2f2 5px solid;
     text-align: left;
     box-shadow: -1px 14px 12px -5px #f2f2f2;
     width: 25%;
@@ -454,7 +454,7 @@ aside {
     gap: 2%;
     height: 100%;
     text-align: left;
-    box-shadow: -1px 14px 12px -5px #f2f2f2;
+    box-shadow: -1px 14px 12px -5px #f3f3f3;
     width: 25%;
 }
 
@@ -462,9 +462,9 @@ aside {
     width: 100%;
     height: 49%;
     border-radius: 20px;
-    border: #f2f2f2 2px solid;
+    border: #f2f2f2 5px solid;
     text-align: left;
-    box-shadow: -1px 14px 12px -5px #f2f2f2;
+    box-shadow: -1px 14px 12px -5px #f3f3f3;
     display: flex;
     flex-direction: column;
 }
