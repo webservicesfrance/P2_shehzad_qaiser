@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+main {
+    width: 95%;
+    margin: auto;
+}
 /*Version Desktop*/
 
 header {
@@ -100,7 +104,7 @@ nav ul li:hover {
     justify-content: center;
     align-items: center;
     border: 2px #f2f2f2 solid;
-    width: 370px;
+    width: 365px;
     height: 50px;
     border-radius: 12px;
     font-family: Raleway, sans-serif;
@@ -109,7 +113,7 @@ nav ul li:hover {
 .icon_map {
     width: 50px;
     height: 50px;
-    border-radius: 10px 0 0 10px;
+    border-radius: 12px 0 0 12px;
     background-color: #f2f2f2;
     display: flex;
     justify-content: center;
@@ -119,24 +123,34 @@ nav ul li:hover {
     font-size: 1.1em;
 }
 
-#btn {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: #0065fc;
-    font-size: 1.1em;
-    color: white;
-    border: none;
-    height: 50px;
-}
-
 #recherche {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.1em;
     border-width: 0;
+    width: 200px;
+    height: 50px;
+}
+.boutton-recherche {
+    border: none;
+    border-radius: 0 12px 12px 0;
+    background-color: #0065fc;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 17px;
+    cursor: pointer;
 }
 
+.boutton-recherche:hover {
+    background-color: #003c96;
+    transition: ease 0.3s;
+}
+
+#icon-glass {
+    display: none;
+}
 /*Menu filtre avec les 4 gros boutons de Fitres*/
 #bloc_filtre {
     display: flex;
@@ -301,12 +315,12 @@ article {
 
 /*Aside les hotels populaires*/
 aside {
+    display: flex;
+    flex-direction: column;
     width: 25%;
     background-color: #f2f2f2;
     border-radius: 20px;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 
@@ -322,7 +336,6 @@ aside {
 
 .link-vignietteA {
     width: 100%;
-    height: 140px;
     text-decoration: none;
 }
 .vignietteA {
@@ -333,6 +346,7 @@ aside {
     gap: 10px;
     border: 5px solid rgb(255, 255, 255);
     box-shadow: 0px 0px 6px 0px white;
+    max-height: 120px;
 }
 
 .vignietteA:hover {
@@ -351,13 +365,13 @@ aside {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    border-radius: 15px 0 0 15px;
+    border-radius: 20px 0 0 20px;
 } /*permet de couvrir la totalité de l'espace en conservant les proportions*/
 
 .hotel-legende {
     width: 60%;
     height: 100%;
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 20px 20px 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -372,33 +386,7 @@ aside {
     margin-top: 0;
     margin-bottom: 0;
 }
-/*vignette 1*/
-.vignietteA#salonA1 {
-    display: flex;
-    margin: 0;
-    background-color: white;
-    border-radius: 20px;
-    padding: 7px 0 7px 7px;
-    box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
-}
-/*vignette 2*/
-.vignietteA#salonA2 {
-    display: flex;
-    margin: 0;
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px 0 5px 6px;
-    box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
-}
-/*vignette 3*/
-.vignietteA#salonA3 {
-    display: flex;
-    margin: 0;
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px 0 5px 6px;
-    box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
-}
+
 /*tarif des chambres*/
 .prix {
     font-weight: bold;
@@ -413,12 +401,14 @@ aside {
 }
 
 /*lien general sur Afficher plus*/
-.Afficherplus a {
+.Afficheplus a {
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
-
+.afficheplus {
+    padding: 0 20px;
+}
 /*Section 2 eme partie Les activites*/
 
 #titreAM {
@@ -495,10 +485,11 @@ aside {
 footer {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 250px;
     width: 100%;
     background-color: #f2f2f2;
-    padding: 50px;
+    padding: 0px;
     margin-top: 20px;
 }
 .liens {
@@ -508,202 +499,152 @@ footer {
     color: #0065fc;
 }
 
+.superpose a:hover {
+    color: #0065fc;
+}
 
+/* ************************************************************************ */
+/*Les Media Queries*/
 @media screen and (max-width: 780px) {
-    body {padding: 0;
+    body {
+        padding: 0;
         margin: 0;
     }
-    header {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .hp:nth-child(1) {
-        order: 1;
-    }
-    .hp:nth-child(2) {
-        order: 3;
-    }
-    .hp:nth-child(3) {
-        order: 2;
-    }
 
-    nav ul li:hover {
-        border-bottom: #0065fc 3px solid;
-        border-top: none;
-    }
-
-    #logo {
-        padding-left: 20px;
-        padding-bottom: 0;
-        padding-top: 30px;
-    }
-    #inscrire {
-        padding-left: 0;
-    }
-
-    /*Bloc recherches*/
-
-    #bloc-recherches {
-        margin: 0 auto;
-    }
-
-    #filtres {
-        display: flex;
-        flex: 1;
-        padding-right: 60%;
-    }
-
-    #bloc_filtre {
-        flex-wrap: wrap;
-    }
-
-    .bloc-presentation {
-        display: flex;
-        flex-direction: column-reverse;
-        width: 100%;         
-            
-}
-article, aside{ width: 100%;
-padding: 0;}
-
-.section0, .bloc-presentation, .bloc-activite{
-    margin: 0;
-    padding: 0 ;}
-
-footer{ margin-top: 20px;
-    padding:0;
-    gap: 20px;
-    text-align: center;
-}
-}
-/*Media queries pour les Mobiles 480px represente le peripherique mobile*/
-
-@media screen and (max-width: 480px) {
-    body {
-        margin: auto;
-    }
-    header {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .hp:nth-child(1) {
-        order: 1;
-    }
-    .hp:nth-child(2) {
-        order: 3;
-    }
-    .hp:nth-child(3) {
-        order: 2;
-    }
-
-    nav ul li:hover {
-        border-bottom: #0065fc 3px solid;
-        border-top: none;
-    }
-
-    #logo {
-        padding-left: 20px;
-        padding-bottom: 0;
-        padding-top: 30px;
-    }
-    #inscrire {
-        padding-left: 0;
-    }
-
-    /*Bloc recherches*/
-
-    #bloc-recherches {
-        margin: 0 auto;
-    }
-
-    #filtres {
-        display: flex;
-        flex: 1;
-        padding-right: 60%;
-    }
-
-    #bloc_filtre {
-        flex-wrap: wrap;
-    }
-    .section0,
-    .bloc-presentation,
-    .bloc-activite {
-        margin: auto;
-        padding: 30px;
+    main {
         width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .hp:nth-child(1) {
+        order: 1;
+    }
+    .hp:nth-child(2) {
+        order: 3;
+    }
+    .hp:nth-child(3) {
+        order: 2;
     }
 
-    /*media queries de la Section 1 Hebergement à Marseille*/
+    nav ul li:hover {
+        border-bottom: #0065fc 3px solid;
+        border-top: none;
+    }
+
+    #logo {
+        padding-left: 20px;
+        padding-bottom: 0;
+        padding-top: 30px;
+    }
+    #inscrire {
+        padding-left: 0;
+    }
+
+    #bloc-recherches {
+        margin: auto;
+        width: auto;
+    }
+    #bloc-recherche {
+        position: relative;
+    }
+
+    #boutton-recherche {
+        display: none;
+    }
+    #icon-glass {
+        display: block;
+        right: -20px;
+        border-radius: 0 12px 12px 0;
+    }
+
+    #filtres {
+        display: flex;
+        flex: 1;
+        padding-right: 60%;
+    }
+
+    #bloc_filtre {
+        flex-wrap: wrap;
+    }
+
     .bloc-presentation {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
-        border-radius: 0;
         width: 100%;
-        gap: 0;
+        gap: 30px;
     }
 
     article {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: #ffffff;
-        width: 100%;
-        margin: 0;
-        padding: 0;
+        border-radius: 0%;
     }
+    article,
+    aside {
+        width: 100%;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .vignietteA {
+        max-height: 145px;
+    }
+
+    article,
     .bloc-vigniette {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        /*margin: auto; /*centrer*/*/
+    }
+    .vignietteM {
+        width: 90%; /*taille des vigniette*/
+        max-height: 250px;
+        margin: auto; /*centrage des vigniette*/
+    }
+
+    .section0,
+    .bloc-presentation {
+        margin: 0;
         padding: 0;
     }
-
-    .vignietteM {
-        margin: 0 30px; /*permet de controler la taille des vignette*/
-        box-shadow: 0px 0px 8px 0px rgb(150, 150, 150);
-    }
-
-    aside {
-        display: flex;
-        width: 100%;
-        padding: 0px;
-    }
-
-    .populaire-bloc {
-        border-radius: 0%;
-        padding: 30px;
-    }
-
-    /*media queries  bloc activite*/
 
     .bloc-activite {
         display: flex;
         flex-direction: column;
+        gap: 20px;
         width: 100%;
         height: auto;
+        margin: 0;
         padding: 0;
-        margin: auto;
     }
 
-    .hotel-section2,
     .hotel-section3 {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        width: 90%;
         gap: 20px;
     }
 
-    /*Footer*/
+    .hotel-section2 {
+        width: 90%;
+    } /*espacement par rapport à la fenetre*/
+
+    /*definir la hauteur des vigniette de Activite*/
+    .hotel-section2 a img,
+    .superpose a img {
+        max-height: 200px;
+    }
+
     footer {
+        display: flex;
         flex-direction: column;
-        gap: 40px;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
         margin: 0;
-        padding: 0 30px;
+        padding: 0;
         width: 100%;
+        margin-top: 20px;
     }
 }
