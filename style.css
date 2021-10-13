@@ -96,6 +96,14 @@ nav ul li:hover {
     padding-right: 40px;
     align-items: flex-start;
 }
+/*new diminution de l'espace */
+#p1 {
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
 
 /*Bouton de Recherche*/
 #bloc-recherches {
@@ -196,6 +204,10 @@ a {
     background-color: #c9defa;
     color: #0065fc;
 }
+
+.icon:hover {
+    background-color: #57a0ff;
+} /*effet bleuté sur l'icon filtre*/
 
 .text {
     justify-content: flex-end;
@@ -428,7 +440,7 @@ aside {
 .hotel-section2 {
     height: 100%;
     border-radius: 20px;
-    border: #f2f2f2 5px solid;
+    border: 5px solid rgb(255, 255, 255);
     text-align: left;
     box-shadow: -1px 14px 12px -5px #f2f2f2;
     width: 25%;
@@ -462,7 +474,7 @@ aside {
     width: 100%;
     height: 49%;
     border-radius: 20px;
-    border: #f2f2f2 5px solid;
+    border: 5px solid rgb(255, 255, 255);
     text-align: left;
     box-shadow: -1px 14px 12px -5px #f3f3f3;
     display: flex;
@@ -490,7 +502,7 @@ footer {
     width: 100%;
     background-color: #f2f2f2;
     padding: 0px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .liens {
     width: auto;
@@ -544,6 +556,13 @@ footer {
     #inscrire {
         padding-left: 0;
     }
+    h1 {
+        padding-left: 10px;
+    }
+    #p1,
+    #p2 {
+        padding-left: 10px;
+    }
 
     #bloc-recherches {
         margin: auto;
@@ -570,6 +589,7 @@ footer {
 
     #bloc_filtre {
         flex-wrap: wrap;
+        padding: 0 10px;
     }
 
     .bloc-presentation {
@@ -582,7 +602,23 @@ footer {
 
     article {
         border-radius: 0%;
+        background-color: white;
     }
+
+    article h2 {
+        padding-left: 20px;
+    }
+
+    aside {
+        background-color: #f2f2f2;
+        border-radius: 0%;
+        padding-bottom: 20px;
+    }
+
+    .aside-titre {
+        justify-content: space-around;
+    }
+
     article,
     aside {
         width: 100%;
@@ -591,7 +627,9 @@ footer {
     }
 
     .vignietteA {
+        width: 90%;
         max-height: 145px;
+        margin: auto;
     }
 
     article,
@@ -614,28 +652,40 @@ footer {
     .bloc-activite {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
         width: 100%;
         height: auto;
-        margin: 0;
+        margin: auto;
         padding: 0;
     }
 
     .hotel-section3 {
         width: 90%;
-        gap: 20px;
+        gap: 30px;
+        margin: auto;
+        padding: 0;
     }
 
     .hotel-section2 {
         width: 90%;
+        margin: auto;
+        padding: 0;
     } /*espacement par rapport à la fenetre*/
+
+    .superpose {
+        width: 98%;
+        padding: 0;
+        margin: auto;
+    }
 
     /*definir la hauteur des vigniette de Activite*/
     .hotel-section2 a img,
     .superpose a img {
         max-height: 200px;
     }
-
+    #titreAM {
+        padding-left: 20px;
+    }
     footer {
         display: flex;
         flex-direction: column;
